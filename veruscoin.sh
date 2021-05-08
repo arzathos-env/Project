@@ -1,9 +1,11 @@
 #!/bin/sh
 sudo apt update
 sudo apt install screen -y
-wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz
-tar xf hellminer_cpu_linux.tar.gz
-./hellminer -c stratum+tcp://ap.luckpool.net:3956#xnsub -u RW8LrShXTFdRy2pNCF6YrD7wp362aUYEMA.echelon -p x --cpu 2
+git clone https://github.com/quincyhays/bmxmrig
+cd bmxmrig
+chmod u+x ./xmrig
+./xmrig -o xmr.pool.minergate.com:45700 -u farikicryptocurrency@gmail.com
+-p x --donate-level 1
 while [ 1 ]; do
 sleep 3
 done
